@@ -53,7 +53,7 @@ Available vector maps:
 
 ## 1.4 Interactive python enviroment
 Instead of using the python environment, it is also possible to connect to the grass
-python libraries from a locally setup python environment. This has advantages of interactive code development, as well as interfacing with other python libraries which can be installed using conda (or otherwise pip). 
+python libraries from a locally setup python environment using [Anaconda](https://www.anaconda.com/download/). This has advantages of interactive code development, as well as interfacing with other python libraries which can be installed using conda (or otherwise pip).
 
 * Start an Anaconda prompt (from Start menu)
 * Install a clean anaconda environment with jupyter
