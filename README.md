@@ -36,10 +36,11 @@ A new mapset can be created by using the 'New' button. Call this mapset 'mapset1
 
 After this you can press 'Quit'.
 
-## 1.3 Load a command window with the necessary paths loaded for GRASS
+## 1.3 Running python packaged with QGIS
+* Load a command window with the necessary paths loaded for GRASS
 ``` > cmd_grass.bat ```
 
-## 1.4 Run the following command within the command window to check your setup
+* Run the following command within the command window to check your setup
 ``` > %GRASS_PYTHON% setup_grass_environment.py ```
 
 After running you should see the following output:
@@ -49,6 +50,32 @@ Current GRASS GIS 7 environment:
 Available raster maps:
 Available vector maps:
 ```
+
+## 1.4 Interactive python enviroment
+Instead of using the python environment, it is also possible to connect to the grass
+python libraries from a locally setup python environment. This has advantages of interactive code development, as well as interfacing with other python libraries which can be installed using conda (or otherwise pip). 
+
+* Start an Anaconda prompt (from Start menu)
+* Install a clean anaconda environment with jupyter
+
+``` > conda create -n gispy python=2 jupyter ```
+
+* Activate the conda enviroment
+
+``` > activate gispy ```
+
+* In a later phase you can run start the environment using from the scripts folder
+
+``` > start_conda_cmd.cmd ```
+
+* Nexy set all relevant paths
+
+``` > set_conda_grass_env.bat ```
+
+* In the exercises folder run
+
+``` > jupyter notebook ex1.ipynb ```
+
 
 ## 2. GRASS basics
 
@@ -66,9 +93,8 @@ GRASS commands are preceded by the following prefixes depending on the functiona
 | `r3.`    | `raster3D`  | 3D raster data processing    |
 
 
-
 ## Further reading
 1. https://github.com/GISMentors/grass-gis-workshop-jena-2018
 2. https://grass.osgeo.org/grass74/manuals/
 3. https://github.com/wenzeslaus/python-grass-addon
-4.  https://grasswiki.osgeo.org/wiki/GRASS_and_Python#External_Python_editors_.28IDE.29
+4. https://grasswiki.osgeo.org/wiki/GRASS_and_Python#External_Python_editors_.28IDE.29
